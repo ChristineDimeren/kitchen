@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --green:#476072;
+    --black: black;
+    --background: #EEEEEE;
+    --box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* Navbar Section */
+.page{
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+
+.navbar{
+    width: 100%;    
+    padding: 20px 0;
+    z-index: 999;
+    background: #334257;
+    font-family: 'Ubuntun', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar .page{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo img{
+    width: 150px;
+}
+.navbar .page .menu{
+    align-items: center;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    justify-content: center;
+}
+.navbar .menu li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px;
+    transition: all 0.5s ease;
+    align-items: center;
+}
+.navbar .menu li a:hover{
+    color: #EEEEEE;
+}
+
+/*menu btn*/
+.navbar .icon i,
+.navbar .icon a{
+    cursor: pointer;
+    margin-left: .3rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #EEEEEE;
+    border-radius: 50%
+    
+    
+}
+.navbar .icon i:hover,
+.navbar .icon a:hover{
+    color: black;
+    background: #476072;
+    transform: rotate(390deg);
+}
+.navbar .icon #bars{
+    display: none;
+    
+}
+
+
+
+/*responsive navbar media*/
+@media(max-width: 991px){
+    .page{
+        font-size: 55%;
+    }
+
+    .navbar{
+        padding: 1rem 2rem;
+    }
+}
+@media(max-width: 768px){
+    .navbar .icon #bars{
+        display: inline-block;
+    }
+    #bars i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        top: 10%; left: 0; right: 0;
+        background: #EEEEEE;
+        border-top:  .1rem solid rgba(0,0,0,.2);
+        border-top:  .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        transition: all 0.6s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+        padding: 1.5rem;
+        margin:  1rem;
+        font-size: 2rem;
+        background: #334257;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 991px){
+    .page{
+        font-size: 50%;
+    }
+}
